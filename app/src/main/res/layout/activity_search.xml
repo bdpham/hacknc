@@ -10,13 +10,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textColor="#eeeeee"
-        android:hint="Search"/>
+        android:hint="Search"
+        android:inputType="text"/>
     <ListView
         android:id="@+id/searchListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp"
+        android:dividerHeight="15dp"
         android:background="#eeeeee">
-
     </ListView>
 </LinearLayout>

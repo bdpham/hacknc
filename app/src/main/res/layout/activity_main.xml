@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:gravity="center"
     android:background="#333333">
     <!--android:layout_paddingLeft="15dp"-->
     <!--android:layout_paddingRight="15dp"-->
@@ -12,30 +12,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#eeeeee"
+        android:paddingLeft="15dp"
         android:text="Now Playing"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-
+        android:layout_height="40dp"
         android:background="#e4e4e4">
     <!--android:paddingRight="15dp"-->
     <!--android:paddingLeft="15dp"-->
+        <TextView
+            android:id="@+id/nowPlayingTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Title"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <!--<TextView-->
+            <!--android:id="@+id/searchButton"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:text="Search"-->
+            <!--android:textColor="#eeeeee"-->
+            <!--android:onClick="search"-->
+            <!--android:clickable="true"/>-->
+
+        <Button
             android:id="@+id/searchButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Search"
+            android:gravity="center"
+            android:background="#333333"
             android:textColor="#eeeeee"
-            android:onClick="search"
-            android:clickable="true"/>
+            android:text="Search"
+            android:onClick="search"/>
     </LinearLayout>
 
     <ListView
@@ -43,7 +61,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#e4e4e4"
-        android:layout_margin="15dp">
+        android:layout_margin="15dp"
+        android:dividerHeight="5dp">
     </ListView>
 
 
