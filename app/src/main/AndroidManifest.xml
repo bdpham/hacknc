@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.phambdvcu.hacknc" >
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +17,19 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:label="SearchActivity" >
+        </activity>
+        <activity
+            android:name=".PlayerActivity"
+            android:label="PlayerActivity" >
+        </activity>
+        <activity
+            android:name=".TrackListView"
+            android:label="@string/title_activity_track_list_view"
+            android:windowSoftInputMode="stateHidden">
         </activity>
     </application>
 

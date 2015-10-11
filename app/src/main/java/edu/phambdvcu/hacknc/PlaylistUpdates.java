@@ -2,7 +2,7 @@ package edu.phambdvcu.hacknc;
 
 
 
-        import android.content.Context;
+import android.content.Context;
         import android.util.Log;
 
         import com.google.api.client.auth.oauth2.Credential;
@@ -29,8 +29,9 @@ public class PlaylistUpdates {
      */
     private YouTube youtube;
     private YouTube.Search.List searcher;
+    private static final long NUMBER_OF_VIDEOS_RETURNED = 15;
 
-    static public final String DEVELOPER_KEY = "AIzaSyBtTsxC0FM6u5kzQWRikQdBh0IZ2MkisVY";
+    static public final String DEVELOPER_KEY = "AIzaSyA30-Hg8KHpMmqjuy-wMC1IKOpEybeUMIk";
 
 
     public PlaylistUpdates(Context content) {
@@ -45,6 +46,7 @@ public class PlaylistUpdates {
             searcher.setKey(DEVELOPER_KEY);
             searcher.setType("video");
             searcher.setFields("items(id/videoId,snippet/title,snippet/thumbnails/default/url)");
+            searcher.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
         }catch(IOException e){
             Log.d("YC", "Could not initialize: " + e);
         }
